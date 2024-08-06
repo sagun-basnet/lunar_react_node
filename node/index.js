@@ -1,8 +1,11 @@
 // const express = require("express");
 import express from "express";
 import postRoute from "./routers/postRoute.js";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 

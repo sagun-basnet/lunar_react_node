@@ -10,13 +10,18 @@ const RegisterForm = () => {
     }
     const [form, setForm] = useState(initialFormData);
 
+    const a = 12;
+    const b = 13;
+
+    const res = a + b;
+    const res1 = a - b;
 
 
     // console.log(form);
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:5500/post', form).then((res) => {
+        await axios.post('http://localhost:5500/post', form).then((res) => {
             console.log(res);
             setForm(initialFormData);
         }).catch((ex) => {
